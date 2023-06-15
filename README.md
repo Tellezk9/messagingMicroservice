@@ -1,4 +1,4 @@
-<br /><
+<br />
 <div align="center">
 <h3 align="center">PRAGMA POWER-UP</h3>
   <p align="center">
