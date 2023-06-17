@@ -10,3 +10,10 @@ management:
     web:
       exposure:
         include: "*"
+
+app:
+  messaging:
+    twilio:
+      Account_SID: ""
+      Auth_token: ""
+      Service_SID: ""

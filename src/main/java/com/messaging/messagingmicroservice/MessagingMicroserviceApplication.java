@@ -1,13 +1,13 @@
-package com.messaging.messagingtwilio;
+package com.messaging.messagingmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MessagingTwilioApplication {
+public class MessagingMicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MessagingTwilioApplication.class, args);
+		SpringApplication.run(MessagingMicroserviceApplication.class, args);
 	}
 
 }
