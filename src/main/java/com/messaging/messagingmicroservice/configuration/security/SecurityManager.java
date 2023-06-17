@@ -1,5 +1,6 @@
-package com.messaging.messagingtwilio.configuration.security;
+package com.messaging.messagingmicroservice.configuration.security;
 
+import com.messaging.messagingmicroservice.configuration.Constants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import jakarta.servlet.FilterChain;
@@ -32,6 +33,7 @@ public class SecurityManager extends OncePerRequestFilter {
         } else {
             try {
                 String token = getToken(request);
+                validRole(token);
                 if (token != null && validateToken(token) && getRoles(token) != null) {
                     filterChain.doFilter(request, response);
                 } else {
@@ -64,6 +66,14 @@ public class SecurityManager extends OncePerRequestFilter {
     private List<String> getRoles(String token) {
         Claims claims = Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token).getBody();
         return claims.get("roles", List.class);
+    }
+    private boolean validRole(String token){
+        Claims claims = Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token).getBody();
+        List<String> role = claims.get("roles", List.class);
+        if (!role.get(0).equals(Constants.ROLE_EMPLOYEE)){
+            return false;
+        }
+        return true;
     }
 
     private Boolean shouldNotFilter(String currentUrl) {

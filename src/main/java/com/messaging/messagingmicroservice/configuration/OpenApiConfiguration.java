@@ -1,4 +1,4 @@
-package com.messaging.messagingtwilio.configuration;
+package com.messaging.messagingmicroservice.configuration;
 
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;

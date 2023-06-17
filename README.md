@@ -36,7 +36,16 @@ To get a local copy up and running follow these steps.
    ```sh
    cd power-up-v4-messaging-twilio-v1
    ```
-
+3. Update the messaging service connection settings
+   ```yml
+   # src/main/resources/application-dev.yml
+   app:
+      messaging:
+         twilio:
+            Account_SID: "<Your-Twilio-account-sid>"
+            Auth_token: "<Your-Twilio-auth-token>"
+            Service_SID: "<Your-Twilio-messaging-service-sid>"
+   ```
 <!-- USAGE -->
 ## Usage
 
