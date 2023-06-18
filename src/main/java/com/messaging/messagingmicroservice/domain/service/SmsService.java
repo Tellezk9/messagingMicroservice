@@ -7,7 +7,7 @@ public class SmsService {
     public boolean allFieldsFilled(Client client) {
         if (
                 (client.getId() == null || client.getId() < 0) ||
-                        (client.getIdOrder() == null || client.getIdOrder() < 0 ||
+                        (client.getSecurityPin() == null || client.getSecurityPin() < 0 ||
                         (client.getName() == null || client.getName().isEmpty()) ||
                         (client.getLastName() == null || client.getLastName().isEmpty()) ||
                         (client.getDniNumber() == null || client.getDniNumber() < 0) ||
