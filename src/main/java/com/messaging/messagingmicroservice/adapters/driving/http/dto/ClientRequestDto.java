@@ -15,7 +15,7 @@ public class ClientRequestDto {
     @Min(1)
     private Long id;
     @Min(1)
-    private Long idOrder;
+    private Long securityPin;
     @NotBlank
     private String name;
     @NotBlank

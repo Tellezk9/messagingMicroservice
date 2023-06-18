@@ -2,16 +2,16 @@ package com.messaging.messagingmicroservice.domain.model;
 
 public class Client {
     private Long id;
-    private Long idOrder;
+    private Long securityPin;
     private String name;
     private String lastName;
     private Integer dniNumber;
     private String phone;
     private String mail;
 
-    public Client(Long id, Long idOrder, String name, String lastName, Integer dniNumber, String phone, String mail) {
+    public Client(Long id, Long securityPin, String name, String lastName, Integer dniNumber, String phone, String mail) {
         this.id = id;
-        this.idOrder = idOrder;
+        this.securityPin = securityPin;
         this.name = name;
         this.lastName = lastName;
         this.dniNumber = dniNumber;
@@ -27,12 +27,12 @@ public class Client {
         this.id = id;
     }
 
-    public Long getIdOrder() {
-        return idOrder;
+    public Long getSecurityPin() {
+        return securityPin;
     }
 
-    public void setIdOrder(Long idOrder) {
-        this.idOrder = idOrder;
+    public void setSecurityPin(Long securityPin) {
+        this.securityPin = securityPin;
     }
 
     public String getName() {

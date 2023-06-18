@@ -22,7 +22,7 @@ public class SmsUseCase implements ISmsServicePort {
         validator.isValidPhone(client.getPhone());
         validator.isValidMail(client.getMail());
 
-        String message = "Hello " + client.getName() + ", We would like to inform you that your order is ready for pickup.\n your code is: "+ client.getIdOrder();
+        String message = "Hello " + client.getName() + ", We would like to inform you that your order is ready for pickup.\n your code is: "+ client.getSecurityPin();
         smsSenderPort.sendSms(client, message);
     }
 }

@@ -21,7 +21,7 @@ class SmsUseCaseTest {
     void sendSms() {
         Client client = new Client(1L, 2L, "testName", "testLastName", 123, "+573102370394", "test@email.com");
         String message = "Hello " + client.getName() + ", We would like to inform you that your order is ready for pickup.\n" +
-                " your code is: " + client.getIdOrder();
+                " your code is: " + client.getSecurityPin();
 
         doNothing().when(smsSenderPort).sendSms(client, message);
 
